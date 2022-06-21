@@ -1,1 +1,16 @@
-<p>video-thumbnail works!</p>
+<a [href]="video.link">
+  <mat-card>
+    <mat-card-content>
+      <div [class]="video.category" class="card" style="width: 18rem;">
+        <img mat-card-image [src]="video.thumbnail" class="card-img-top" [alt]="video.title">
+        <div class="card-body">
+          <h5 class="card-title">{{video.title}}</h5>
+          <p class="card-text">{{video.description}}</p>
+          <span [ngClass]="video.numberOfviews > 1000000 ? 'red' : 'green' "> {{ video.numberOfviews }} </span>
+          <span *ngIf="video.isLive">  Video is live ! </span>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</a>
+

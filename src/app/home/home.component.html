@@ -1,5 +1,8 @@
 <mat-toolbar>
   <span>YouTube</span>
-  <app-searchbar></app-searchbar>
+  <app-searchbar (usersSearch)="onUsersSearch($event)"></app-searchbar>
 </mat-toolbar>
-<app-video-thumbnail></app-video-thumbnail>
+
+<main>
+  <app-video-thumbnail *ngFor="let video of youtubeVideos" [video]="video"></app-video-thumbnail>
+</main>
