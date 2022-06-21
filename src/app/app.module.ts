@@ -13,11 +13,13 @@ import {MatInputModule} from '@angular/material/input';
 import {MatListModule} from '@angular/material/list';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
 
 
 import { HomeComponent } from './home/home.component';
 import { SearchbarComponent } from './searchbar/searchbar.component';
 import { VideoThumbnailComponent } from './video-thumbnail/video-thumbnail.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,10 @@ import { VideoThumbnailComponent } from './video-thumbnail/video-thumbnail.compo
     MatListModule,
     MatMenuModule,
     MatToolbarModule,
-    MatSliderModule
+    MatSliderModule,
+    MatIconModule,
+
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
