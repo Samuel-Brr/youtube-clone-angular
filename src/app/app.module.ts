@@ -6,10 +6,16 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatSliderModule } from '@angular/material/slider';
+import { HomeComponent } from './home/home.component';
+import { SearchbarComponent } from './searchbar/searchbar.component';
+import { VideoThumbnailComponent } from './video-thumbnail/video-thumbnail.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    SearchbarComponent,
+    VideoThumbnailComponent
   ],
   imports: [
     BrowserModule,
