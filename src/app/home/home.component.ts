@@ -10,6 +10,7 @@ import { dataset } from '../data/youtubeVideos.data';
 export class HomeComponent implements OnInit {
 
   youtubeVideos: YoutubeVideo[] = dataset
+  cloneYoutubeVideos = [...this.youtubeVideos]
 
   constructor() { }
 
@@ -22,7 +23,7 @@ export class HomeComponent implements OnInit {
   }
 
   searchVideo(userInput: string){
-    this.youtubeVideos = this.youtubeVideos.filter((video: YoutubeVideo) => video.title.toLowerCase().includes(userInput.toLowerCase()))
+    this.cloneYoutubeVideos = this.youtubeVideos.filter((video: YoutubeVideo) => video.title.toLowerCase().includes(userInput.toLowerCase()))
     console.log('LISTE APRES FILTRE',this.youtubeVideos)
   }
 
